@@ -25,6 +25,10 @@ describe('email-split splitting an email with a top-level domain', function () {
   it('returns the domain part', function () {
     assert.strictEqual(this.emailParts.domain, 'underdog.io');
   });
+
+  it('returns the full email address', function () {
+    assert.strictEqual(this.emailParts.full, 'todd@underdog.io');
+  });
 });
 
 describe('email-split splitting an email on a subdomain', function () {
@@ -36,5 +40,9 @@ describe('email-split splitting an email on a subdomain', function () {
 
   it('returns the domain part', function () {
     assert.strictEqual(this.emailParts.domain, 'are.super.cool');
+  });
+
+  it('returns the full email address', function () {
+    assert.strictEqual(this.emailParts.full, 'you@are.super.cool');
   });
 });
