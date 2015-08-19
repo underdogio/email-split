@@ -12,7 +12,8 @@ var emailSplit = require('email-split');
 emailSplit('todd@underdog.io'); /*
 {
   local: 'todd',
-  domain: 'underdog.io'
+  domain: 'underdog.io',
+  full: 'todd@underdog.io'
 }
 */
 ```
@@ -33,6 +34,8 @@ Function that extracts local and domain parts of email address.
         - For example, `todd` in `todd@underdog.io`
     - domain `String` - Tailing portion of email address
         - For example, `underdog.io` in `todd@underdog.io`
+    - full `String` - Full email address
+        - For example, `todd@underdog.io`
 
 > We chose the names `local` and `domain` based off of the RFC specification for `mailto`.
 >
